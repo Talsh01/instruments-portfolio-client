@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .search-row{
+        width: 20%;
+
+        .mat-form-field{
+            width: 100%;
+        }
+    }
+
+    .instruments-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        .delete {
+
+            margin: auto;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    div {
+        padding: 1%;
+        display: flex;
+    }
+    
+}
+
+
+
+.new-button {
+    &:hover {
+        background-color: rgb(195, 195, 201);
+        cursor: pointer;
+    }
+
+    background-color: #e8e8eb;
+    font-size: 30px;
+    border-radius: 14px;
+    font-weight: bolder;
+}

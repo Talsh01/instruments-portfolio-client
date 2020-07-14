@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Instruments Portfolio</h1>
+
+    <div class="search-row">
+        <mat-form-field appearance="fill" class="item">
+            <mat-label>Search name</mat-label>
+            <input matInput type="text" id="searchString" [(ngModel)]="searchString" (input)="search()" tabindex="1">
+        </mat-form-field>
+    </div>
+    
+    <div class="new-button" (click)="openNewDialog()">+</div>
+    <div class="instruments-container">
+        <div *ngFor="let instrument of filteredInstruments">
+            <app-instrument-list-item [id]="instrument.id" 
+                                [name]="instrument.name" 
+                                [symbol]="instrument.symbol" 
+                                [type]="instrument.type"
+                                (click)="openInstrumentInfo(instrument)">
+            </app-instrument-list-item>
+        <div class="delete" (click)="delete(instrument)"><mat-icon>delete</mat-icon></div>
+        </div>
+    </div>
+</div>
+
+
+

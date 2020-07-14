@@ -1,0 +1,20 @@
+<div class="form">
+    <h3>Add Instrument</h3>
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" id="name" tabindex="1" [(ngModel)]="name">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Symbol</mat-label>
+        <input matInput type="text" id="symbol" tabindex="2" [(ngModel)]="symbol">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Type</mat-label>
+        <input matInput type="text" id="type" tabindex="3" [(ngModel)]="type">
+    </mat-form-field>
+
+    <button mat-raised-button (click)="create()" class="item"[disabled]="disabled" tabindex="4">
+        Create
+    </button>
+    <div class="error" *ngIf="displayError">{{errorMessage}}</div>
+</div>
